@@ -22,7 +22,7 @@ module.exports = {
     SMTP_FROM_EMAIL: 'noreply@bookit.com',
     SMTP_FROM_NAME: 'BookIT',
 
-    NEXTAUTH_URL: 'https://bookit.vercel.app',
+    NEXTAUTH_URL: 'bookit-zeta.vercel.app',
   },
   images: {
     domains: ['res.cloudinary.com'],
