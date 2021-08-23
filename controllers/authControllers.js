@@ -230,8 +230,10 @@ const deleteUser = catchAsyncErrors(async (req, res) => {
   }
 
   // Remove avatar
-  const image_id = user.avatar.public_id;
-  await cloudinary.v2.uploader.destroy(image_id);
+  if (user.avatar.public_id !== 'DEFAULT_AVATAR') {
+    const image_id = user.avatar.public_id;
+    await cloudinary.v2.uploader.destroy(image_id);
+  }
 
   await user.remove();
 
