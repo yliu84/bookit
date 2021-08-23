@@ -26,13 +26,11 @@ const Header = () => {
       <div className='container'>
         <div className='col-3 p-0'>
           <div className='navbar-brand'>
-            <Link href='/' passHref>
-              <Image
+            <Link href='/'>
+              <img
+                style={{ cursor: 'pointer' }}
                 src='/images/bookit_logo.png'
                 alt='BookIT'
-                width='145'
-                height='33'
-                cursor='pointer'
               />
             </Link>
           </div>
@@ -49,7 +47,7 @@ const Header = () => {
                 aria-expanded='false'
               >
                 <figure className='avatar avatar-nav'>
-                  <Image
+                  <img
                     src={user.avatar && user.avatar.url}
                     alt={user && user.name}
                     className='rounded-circle'
@@ -104,7 +102,7 @@ const Header = () => {
             </div>
           ) : (
             !loading && (
-              <Link href='/login'>
+              <Link href='/login' passHref>
                 <a className='btn btn-danger px-4 text-white login-header-btn float-right'>
                   Login
                 </a>
