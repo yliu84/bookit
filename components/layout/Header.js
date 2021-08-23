@@ -28,9 +28,11 @@ const Header = () => {
           <div className='navbar-brand'>
             <Link href='/' passHref>
               <Image
-                style={{ cursor: 'pointer' }}
                 src='/images/bookit_logo.png'
                 alt='BookIT'
+                width='145'
+                height='33'
+                cursor='pointer'
               />
             </Link>
           </div>
